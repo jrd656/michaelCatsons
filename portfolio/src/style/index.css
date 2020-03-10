@@ -1,8 +1,11 @@
-/*main.html-----------------------------------------------------------*/
 
+@import "global.css";
+
+/*main.html-----------------------------------------------------------*/
 .framesContainer{
     margin: 0;
     padding: 0;
+    height: 100% ;
 }
 .frame {
 
@@ -10,12 +13,9 @@
     margin: 0;
     padding: 0;
 
-    /*remove the scroll bars within the iframe elements*/
-    overflow:hidden;
 
     /*testing properties*/
     border:5px solid black;
-    height: 500px;
 
 }
 

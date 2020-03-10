@@ -23,8 +23,8 @@
 }
 
 img {
-  max-height: 200px;
-  max-width: 200px;
+  height: 200px;
+  width: 200px;
   border-radius: 5px 5px 0 0;
 }
 
@@ -39,17 +39,10 @@ img {
     --font-title: 'Raleway', sans-serif;
     --font-text: 'Roboto', sans-serif;
 }
-<<<<<<< HEAD
-
 
 .about{
 width: 50%;
 text-align: left;
 border: medium;
 color: red;
-
-
 }
-
-=======
->>>>>>> b5cc7ab3ae39b610e9d97d88b21e0ac067b99695

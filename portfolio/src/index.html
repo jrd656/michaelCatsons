@@ -8,7 +8,7 @@
 
     <script>
         function matchHeight(form){
-            form.style.height=(form.contentWindow.document.body.scrollHeight+20)+'px';
+            form.style.height=(form.contentWindow.document.body.offsetHeight+20)+'px';
         }
     </script>
 
@@ -17,13 +17,13 @@
 
 <div class="framesContainer">
 
-    <iframe id="frameHeader" class="frame" src="html/header.html" onload="matchHeight(this)">
+    <iframe id="frameHeader" class="frame" src="html/header.html"  onload="matchHeight(this)">
     </iframe>
 
     <iframe id="frameAbout" class="frame" src="html/about.html" onload="matchHeight(this)">
     </iframe>
 
-    <iframe id="frameTeam" class="frame" src="html/team.html" onload="matchHeight(this)">
+    <iframe id="frameTeam" class="frame" src="html/team.html"    onload="matchHeight(this)">
     </iframe>
 
     <iframe id="frameContact" class="frame" src="html/contactForm.html" onload="matchHeight(this)">
@@ -37,25 +37,25 @@
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameHeader">
-                <img src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
+                <img class="menuImg" src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
             </a>
         </div>
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameAbout">
-                <img src="../res/images/icons/img-icon-about.svg" alt="About menu icon">
+                <img class="menuImg" src="../res/images/icons/img-icon-about.svg" alt="About menu icon">
             </a>
         </div>
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameTeam">
-                <img src="../res/images/icons/img-icon-members.svg" alt="Team menu icon">
+                <img class="menuImg" src="../res/images/icons/img-icon-members.svg" alt="Team menu icon">
             </a>
         </div>
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameContact">
-                <img src="../res/images/icons/img-icon-Team.svg" alt="contact menu item">
+                <img class="menuImg" src="../res/images/icons/img-icon-Team.svg" alt="contact menu item">
             </a>
         </div>
 

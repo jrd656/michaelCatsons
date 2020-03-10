@@ -39,17 +39,22 @@ img {
     --font-title: 'Raleway', sans-serif;
     --font-text: 'Roboto', sans-serif;
 }
-<<<<<<< HEAD
 
 
 .about{
-width: 50%;
-text-align: left;
-border: medium;
-color: red;
-
+  
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        padding:10px;
+        margin:10x;
+        width: 50%;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border: medium;
 
 }
 
-=======
->>>>>>> b5cc7ab3ae39b610e9d97d88b21e0ac067b99695

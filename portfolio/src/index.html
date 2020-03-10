@@ -4,22 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style/main.css"/>
+    <link rel="stylesheet" type="text/css" href="style/index.css"/>
+
+    <script>
+        function matchHeight(form){
+            form.style.height=(form.contentWindow.document.body.scrollHeight+20)+'px';
+        }
+    </script>
+
 </head>
 <body>
 
 <div class="framesContainer">
 
-    <iframe id="frameHeader" class="frame" src="html/header.html">
+    <iframe id="frameHeader" class="frame" src="html/header.html" onload="matchHeight(this)">
     </iframe>
 
-    <iframe id="frameAbout" class="frame" src="html/about.html">
+    <iframe id="frameAbout" class="frame" src="html/about.html" onload="matchHeight(this)">
     </iframe>
 
-    <iframe id="frameTeam" class="frame" src="html/team.html">
+    <iframe id="frameTeam" class="frame" src="html/team.html" onload="matchHeight(this)">
     </iframe>
 
-    <iframe id="frameContact" class="frame" src="html/contactForm.html">
+    <iframe id="frameContact" class="frame" src="html/contactForm.html" onload="matchHeight(this)">
     </iframe>
 </div>
 
@@ -36,7 +43,7 @@
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameAbout">
-                <img src="../res/images/icons/img-icon-about.svg"alt="About menu icon">
+                <img src="../res/images/icons/img-icon-about.svg" alt="About menu icon">
             </a>
         </div>
 

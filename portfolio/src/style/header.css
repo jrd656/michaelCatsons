@@ -1,0 +1,15 @@
+@import "global.css";
+
+
+
+.header-title {
+
+
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    padding: 60px;
+    color: var(--color-menu)
+    
+}

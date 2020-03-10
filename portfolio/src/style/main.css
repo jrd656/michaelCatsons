@@ -11,3 +11,13 @@
     --font-text: 'Roboto', sans-serif;
 }
 
+
+.about{
+width: 50%;
+text-align: left;
+border: medium;
+color: red;
+
+
+}
+

@@ -1,12 +1,41 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding:10px;
+  margin:10x;
+  width: 100%;
+  text-align: left;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px 5px 0 0;
+}
+
 /*import the font*/
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
-
 :root{
  --color-background: #F4F1F3;
  --color-menu: #5A80A1;
- --color-sub1: #F4F1F3;
- --color-sub2: #F4F1F3;
- --color-sub3: #F4F1F3;
+ --color-sub1: #040b474d;
+ --color-sub2: rgb(25, 27, 158);
+ --color-sub3: rgba(59, 35, 146, 0.781);
 
     /*variables for font-family */
     --font-title: 'Raleway', sans-serif;
@@ -19,6 +48,13 @@
 .framesContainer{
     margin: 0;
     padding: 0;
+}
+
+.about{
+width: 50%;
+text-align: left;
+border: medium;
+color: red;
 }
 
 .frame {
@@ -99,3 +135,69 @@ img {
     border: medium;
     color: red;
 }
+
+/*contactForm.html--------------------------------*/
+
+    /*title for Contact Page */
+    .title {
+        font-family: var(--font-title);
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    .form-container {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        background-color: var(--color-background);
+        padding: 30px 0px 40px 0px;
+    }
+    
+    
+    .form {
+        background-color: var(--color-sub1);
+        margin: auto;
+        width: 60%;
+        max-width: 500px;
+        padding: 20px;
+        line-height: 40px;
+        border-radius: 10px;
+        color: var(--color-background);
+        font-family: var(--font-text);
+    }
+    
+    .input {
+        border-radius: 5px;;
+        Display: block;
+        width: 98%;
+        height: 25px;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-family: inherit;
+    }
+    
+    .textbox {
+        height: 140px;
+        font-family: inherit;
+        resize: vertical;
+    }
+    
+    .submit-button {
+        width: 100%;
+        padding: 12px 20px;
+        background: var(--color-sub1);
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 5px;
+        border-color: black;
+        cursor: pointer;
+        transition: color 0.4s;
+        transition: background-color 0.4s;
+        font-weight: 800;
+    }
+    
+    .submit-button:hover {
+        background-color: var(--color-menu);
+        color: white;
+    }
+    

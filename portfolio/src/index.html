@@ -4,51 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style/main.css"/>
+    <link rel="stylesheet" type="text/css" href="style/index.css"/>
+
+    <script>
+        function matchHeight(form){
+
+
+            console.log(form,form.content,form.contentWindow);
+
+            form.style.height=  form.contentWindow.document.documentElement.offsetHeight  +'px';
+        }
+    </script>
+
 </head>
 <body>
 
-<div class="framesContainer">
+<div class="frameOuterContainer">
 
-    <iframe id="frameHeader" class="frame" src="html/header.html">
-    </iframe>
+    <div class="framesInnerContainer">
 
-    <iframe id="frameAbout" class="frame" src="html/about.html">
-    </iframe>
+        <iframe id="frameHeader" class="frame" src="html/header.html"  scrolling="no"  one="matchHeight(this)" >
+        </iframe>
 
-    <iframe id="frameTeam" class="frame" src="html/team.html">
-    </iframe>
+        <iframe id="frameAbout" class="frame" src="html/about.html"  scrolling="no"  onload="matchHeight(this)" >
+        </iframe>
 
-    <iframe id="frameContact" class="frame" src="html/contactForm.html">
-    </iframe>
+        <iframe id="frameTeam" class="frame" src="html/team.html"  scrolling="no"  onload="matchHeight(this)"   >
+        </iframe>
+
+        <iframe id="frameContact" class="frame" src="html/contactForm.html"  scrolling="no"  onload="matchHeight(this)"  >
+        </iframe>
+
+    </div>
 </div>
 
+<div class="navMenuFixedContainer">
 
-<div class="menuItemsFixedContainer">
-
-    <div class="menuItemsBackground">
+    <div class="navMenuItemsContainer">
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameHeader">
-                <img src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
+                <img class="menuImg" src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
             </a>
         </div>
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameAbout">
-                <img src="../res/images/icons/img-icon-about.svg"alt="About menu icon">
+                <img class="menuImg" src="../res/images/icons/img-icon-about.svg" alt="About menu icon">
             </a>
         </div>
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameTeam">
-                <img src="../res/images/icons/img-icon-members.svg" alt="Team menu icon">
+                <img class="menuImg" src="../res/images/icons/img-icon-members.svg" alt="Team menu icon">
             </a>
         </div>
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameContact">
-                <img src="../res/images/icons/img-icon-Team.svg" alt="contact menu item">
+                <img class="menuImg" src="../res/images/icons/img-icon-Team.svg" alt="contact menu item">
             </a>
         </div>
 

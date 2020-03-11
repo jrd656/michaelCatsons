@@ -9,8 +9,7 @@
   text-align: left;
   display:flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-}
+  flex-wrap: nowrap;}
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -50,12 +49,6 @@ img {
     padding: 0;
 }
 
-.about{
-width: 50%;
-text-align: left;
-border: medium;
-color: red;
-}
 
 .frame {
 
@@ -129,12 +122,7 @@ img {
 
 /*about.html---------------------------------------------------------*/
 
-.about {
-    width: 50%;
-    text-align: left;
-    border: medium;
-    color: red;
-}
+
 
 /*contactForm.html--------------------------------*/
 

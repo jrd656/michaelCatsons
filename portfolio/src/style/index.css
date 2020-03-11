@@ -1,29 +1,81 @@
+
+@import "global.css";
+
 /*main.html-----------------------------------------------------------*/
 
-.framesContainer{
+
+:root{
+    --nav-menu-icon-size: 70px;
+
+    --nav-menu-background-color: var(--color-menu);
+    --nav-menu-flex-direction: column;
+
+    --nav-menu-pos-bottom: 15px;
+    --nav-menu-pos-right: 15px;
+    --nav-menu-pos-left: auto;
+    --nav-menu-pos-top: auto;
+
+    --nav-menu-hover-scale-factor:1.05;
+    --nav-menu-hover-opacity:0.8;
+
+}
+
+
+
+body{
+    background: var(--color-background);
+    padding: 0px;
+    margin: 0px;
+}
+html, body, main {
+    /*fixes the big that accrues when setting the .framesContainer height to 100%  */
+    height: 100%;
+}
+
+.frameOuterContainer{
+    padding: 30px;
+    background-color: darkred;
+
+}
+.framesInnerContainer{
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+
+    /*!*************************************************************************!*/
+    /*removes the spaces between the frames*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    /*align-items: stretch;*/
+
+    /*************************************************************************/
+
+
 }
 .frame {
 
     width:100%;
     margin: 0;
     padding: 0;
-
-    /*remove the scroll bars within the iframe elements*/
-    overflow:hidden;
-
-    /*testing properties*/
-    border:5px solid black;
-    height: 500px;
+    /*************************************************************************/
+    background-color: darkgreen;
+    border-radius: 5px;
+    border: 5px solid black;
 
 }
 
+.menuItem, .menuImg{
+    width: var(--nav-menu-icon-size);
+    height:var(--nav-menu-icon-size);
+}
+
 .hoverButtonGrayScale{
-    /*filter: url(filters.svg#grayscale); !* Firefox 3.5+ *!*/
-    filter: gray; /* IE5+ */
-    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: all .1s ease-in-out;
+/*filter: url(filters.svg#grayscale); !* Firefox 3.5+ *!*/
+filter: gray; /* IE5+ */
+-webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+-webkit-transition: all .1s ease-in-out;
 }
 .hoverButtonGrayScale:hover {
     filter: none;
@@ -31,26 +83,44 @@
     -webkit-transform: scale(1.1);
 }
 
-.menuButton{
-    width: 60px;
-    height:60px;
-}
-.menuItemsFixedContainer{
-    display:flex;
-    flex-flow: row nowrap;
-    justify-content: center;
 
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-.menuItemsBackground
-{
+.navMenuFixedContainer{
+    /*center the container*/
     display:flex;
-    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+
+    bottom: var(--nav-menu-pos-bottom);
+    right: var(--nav-menu-pos-right);
+    left: var(--nav-menu-pos-left);
+    top: var(--nav-menu-pos-top);
+
+    /*needed in order to place the nav menu over the content*/
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.navMenuItemsContainer {
+
+    /*elements positioning*/
+    display:flex;
+    flex-direction: var(--nav-menu-flex-direction);
+
+    pointer-events: auto;
+
+
+    /*background color*/
     width:fit-content;
-    background-color: var(--color-menu);
+    background-color: var(--nav-menu-background-color);
     border-radius: 20px;
 
+    opacity: var(--nav-menu-hover-opacity);
+    -webkit-transition: all .1s ease-in-out;
+}
+.navMenuItemsContainer:hover{
+
+    -webkit-transform: scale(var(--nav-menu-hover-scale-factor));
+    opacity: 1;
 }

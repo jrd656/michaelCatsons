@@ -12,4 +12,6 @@
     --font-title: 'Raleway', sans-serif;
     --font-text: 'Roboto', sans-serif;
 
+
+    --screen-width-phone-threshold:600px;
 }

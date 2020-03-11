@@ -99,6 +99,7 @@ filter: gray; /* IE5+ */
     position: fixed;
     width: 100%;
     z-index: 1;
+    pointer-events: none;
 }
 
 .navMenuItemsContainer {
@@ -106,6 +107,8 @@ filter: gray; /* IE5+ */
     /*elements positioning*/
     display:flex;
     flex-direction: var(--nav-menu-flex-direction);
+
+    pointer-events: auto;
 
 
     /*background color*/

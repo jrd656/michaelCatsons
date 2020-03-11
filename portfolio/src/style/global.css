@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
 
 :root{
-    --color-background: #F4F1F3;
+    --color-background-main: black ;
+    --color-section-1: #C9C8C9;
+    --color-section-2: #e3dfe5;
+
+
     --color-menu: #5A80A1;
-    --color-sub1: rgb(55, 99, 180);
-    --color-sub2: rgb(63, 181, 202);
-    --color-sub3: rgba(17, 167, 159, 0.671);
+
 
     /*variables for font-family */
     --font-title: 'Raleway', sans-serif;
     --font-text: 'Roboto', sans-serif;
+
+
 
 }

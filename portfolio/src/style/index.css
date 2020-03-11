@@ -3,32 +3,105 @@
 
 /*main.html-----------------------------------------------------------*/
 
-body{
-    background: var(--color-background);
+
+:root{
+    /*colors--------------------------------------------------------------*/
+    --page-backgrorund-color: var(--color-background-main);
+    --frames-background-color:var(--color-section-1);
+    --nav-menu-background-color: var(--color-menu);
+
+    /*padding and margins---------------------------------------------------*/
+
+    --framesContainer-padding: 50px 50px;
+    --nav-menu-padding-bottom: 15px;
+    --nav-menu-padding-right: auto;
+    --nav-menu-padding-left: auto;
+    --nav-menu-padding-top: auto;
+
+
+    /*nav-------------------------------------------------------------------*/
+    --nav-menu-icon-size: 5em  ;
+    --nav-menu-flex-direction: row;
+    --menu-position-hotizontaly: flex-center;
+    --menu-position-vertically: center;
+
+    --nav-menu-hover-scale-factor:1.05;
+    --nav-menu-hover-opacity:0.8;
+
 }
 
+@media screen and (min-width:  600px ) {
+ :root{
 
-.framesContainer{
+     --nav-menu-flex-direction: column;
+     --menu-position-hotizontaly: flex-end;
+     --menu-position-vertically: flex-end;
+     --nav-menu-padding-bottom: 15px;
+     --nav-menu-padding-right: 15px;
+ }
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--page-backgrorund-color);
+    padding: 0px;
+    margin: 0px;
+
+}
+html, body, main {
+    /*fixes the big that accrues when setting the .framesContainer height to 100%  */
+    height: 100%;
+}
+
+.frameOuterContainer{
+    padding: var(--framesContainer-padding);
+
+}
+.framesInnerContainer{
     margin: 0;
     padding: 0;
-    height: 100% ;
+    width: 100%;
+    height: 100%;
+
+    /*!*************************************************************************!*/
+    /*removes the spaces between the frames*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    /*align-items: stretch;*/
+
+    /*************************************************************************/
+
+
 }
 .frame {
 
     width:100%;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    /*************************************************************************/
+    background-color: var(--frames-background-color);
+    /*border-radius: 5px;*/
+    border: 0px none;
 
-
-    /*testing properties*/
-    border:5px solid black;
 
 }
 
+.sectionColor1{
+    background-color: var(--color-section-1);
+}
+
+.sectionColor2{
+    background-color: var(--color-section-2);
+
+}
 
 .menuItem, .menuImg{
-    width: 70px;
-    height:70px;
+    width: var(--nav-menu-icon-size);
+    height:var(--nav-menu-icon-size);
 }
 
 .hoverButtonGrayScale{
@@ -44,31 +117,44 @@ filter: gray; /* IE5+ */
 }
 
 
-.menuItemsFixedContainer{
+.navMenuFixedContainer{
     /*center the container*/
     display:flex;
-    justify-content: center;
+    justify-content: var(--menu-position-vertically);
+    align-content: var(--menu-position-hotizontaly);
 
+
+    bottom: var(--nav-menu-padding-bottom);
+    right: var(--nav-menu-padding-right);
+    left: var(--nav-menu-padding-left);
+    top: var(--nav-menu-padding-top);
+
+    /*needed in order to place the nav menu over the content*/
     position: fixed;
-    bottom: 10px;
     width: 100%;
-
-
-
+    z-index: 1;
+    pointer-events: none;
 }
 
+.navMenuItemsContainer {
 
-.menuItemsBackground {
+    /*elements positioning*/
     display:flex;
-    flex-flow: row nowrap;
+    flex-direction: var(--nav-menu-flex-direction);
+
+    pointer-events: auto;
+
+
+    /*background color*/
     width:fit-content;
-    background-color: var(--color-menu);
+    background-color: var(--nav-menu-background-color);
     border-radius: 20px;
 
+    opacity: var(--nav-menu-hover-opacity);
     -webkit-transition: all .1s ease-in-out;
-    opacity: 0.8;
 }
-.menuItemsBackground:hover{
-    -webkit-transform: scale(1.1);
+.navMenuItemsContainer:hover{
+
+    -webkit-transform: scale(var(--nav-menu-hover-scale-factor));
     opacity: 1;
 }

@@ -7,37 +7,42 @@
     <link rel="stylesheet" type="text/css" href="style/index.css"/>
 
     <script>
+
         function matchHeight(form){
-            form.style.height=(form.contentWindow.document.body.offsetHeight+20)+'px';
+                form.style.height=  form.contentWindow.document.documentElement.offsetHeight  +'px';
+
         }
     </script>
 
 </head>
 <body>
 
-<div class="framesContainer">
+<div class="frameOuterContainer">
 
-    <iframe id="frameHeader" class="frame" src="html/header.html"  onload="matchHeight(this)">
-    </iframe>
+        <div class="framesInnerContainer">
 
-    <iframe id="frameAbout" class="frame" src="html/about.html" onload="matchHeight(this)">
-    </iframe>
+            <iframe id="frameHeader" class="frame .sectionColor1" src="html/header.html"  scrolling="no"  onload="matchHeight(this)" >
+            </iframe>
 
-    <iframe id="frameTeam" class="frame" src="html/team.html"    onload="matchHeight(this)">
-    </iframe>
+            <iframe id="frameAbout" class="frame sectionColor2" src="html/about.html"  scrolling="no"  onload="matchHeight(this)" >
+            </iframe>
 
-    <iframe id="frameContact" class="frame" src="html/contactForm.html" onload="matchHeight(this)">
-    </iframe>
+            <iframe id="frameTeam" class="frame sectionColor1" src="html/team.html"  scrolling="no"  onload="matchHeight(this)"   >
+            </iframe>
+
+            <iframe id="frameContact" class="frame sectionColor2" src="html/contactForm.html"  scrolling="no"  onload="matchHeight(this)"  >
+            </iframe>
+
+        </div>
 </div>
 
+<div class="navMenuFixedContainer">
 
-<div class="menuItemsFixedContainer">
-
-    <div class="menuItemsBackground">
+    <div class="navMenuItemsContainer">
 
         <div class="menuItem hoverButtonGrayScale">
             <a href="#frameHeader">
-                <img class="menuImg" src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
+                    <img class="menuImg" src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
             </a>
         </div>
 

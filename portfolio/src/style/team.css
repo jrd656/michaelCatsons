@@ -4,7 +4,7 @@ body{
     flex-direction:row;
     flex-wrap:wrap;
     justify-content: center;
-    width:100%
+    width:100%;
     padding:0;
     margin:0;
 }
@@ -54,12 +54,13 @@ img {
   object-fit:cover;
 }
 
+
+/* Make the team member picture center in screen size equal or smaller than 800px*/
 @media screen and (max-width: 800px) {
   img{
    align-self:center;
   }
 }
-
 
 
 h4{

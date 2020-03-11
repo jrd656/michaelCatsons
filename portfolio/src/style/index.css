@@ -91,9 +91,24 @@ html, body, main {
 
 }
 
+
 .headerColor{
     background-color:var(--page-backgrorund-color);
     height: 100vh;
+
+}
+
+#downArrow{
+    width:  var(--nav-menu-icon-size);
+    height: var(--nav-menu-icon-size);
+    position: absolute;
+    bottom: 20vh;
+    left:calc( 50vw - 25px);
+
+}
+#downArrow  img{
+    width: 100%;
+    height: 100%;
 
 }
 

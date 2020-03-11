@@ -9,6 +9,7 @@
     <script>
 
         function matchHeight(form){
+
                 form.style.height=  form.contentWindow.document.documentElement.offsetHeight  +'px';
 
         }
@@ -21,9 +22,15 @@
 
         <div class="framesInnerContainer">
 
-            <iframe id="frameHeader" class="frame headerColor" src="html/header.html"  scrolling="no"  >
-            </iframe>
+            <div i>
+                <a href="#frameAbout" id="downArrow">
+                    <img  src="../res/images/icons/img-icon-down.png" >
+                </a>
 
+                <iframe id="frameHeader" class="frame headerColor" src="html/header.html"  scrolling="no"  >
+
+                </iframe>
+            </div>
             <iframe id="frameAbout" class="frame sectionColor2" src="html/about.html"  scrolling="no"  onload="matchHeight(this)" >
             </iframe>
 

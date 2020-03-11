@@ -44,6 +44,7 @@
 
 html{
     scroll-behavior: smooth;
+
 }
 body{
     background: var(--page-backgrorund-color);
@@ -87,6 +88,12 @@ html, body, main {
     /*border-radius: 5px;*/
     border: 0px none;
 
+
+}
+
+.headerColor{
+    background-color:var(--page-backgrorund-color);
+    height: 100vh;
 
 }
 

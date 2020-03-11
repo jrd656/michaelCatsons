@@ -16,13 +16,22 @@ The team had some initial problems working on a master CSS file, and decided to 
 
 <u>Team Guidelines</u>
 
-<strong>--> commit message naming convention:</strong>
+<strong>--> Commit message naming convention:</strong>
 
 f: \<the new feature description\> 
 <br>
 b: \<bug fix description\>
 <br>
 r: \<added resource description\>
+
+<strong>--> CSS class naming convention:</strong>
+
+rule: all lowercase, words combined with 'dash'
+
+<i>eg. <b>.form-container</b></i>
+
+
+
 
 
 

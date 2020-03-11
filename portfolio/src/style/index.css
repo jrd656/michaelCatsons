@@ -6,13 +6,13 @@
 
 :root{
     /*colors--------------------------------------------------------------*/
-    --page-backgrorund-color: var(--color-background);
-    --frames-background-color:var(--color-element-background);
+    --page-backgrorund-color: var(--color-background-main);
+    --frames-background-color:var(--color-section-1);
     --nav-menu-background-color: var(--color-menu);
 
     /*padding and margins---------------------------------------------------*/
 
-    --framesContainer-padding: 50px 130px;
+    --framesContainer-padding: 50px 50px;
     --nav-menu-padding-bottom: 15px;
     --nav-menu-padding-right: auto;
     --nav-menu-padding-left: auto;
@@ -42,11 +42,14 @@
 
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: var(--page-backgrorund-color);
     padding: 0px;
     margin: 0px;
+
 }
 html, body, main {
     /*fixes the big that accrues when setting the .framesContainer height to 100%  */
@@ -78,11 +81,21 @@ html, body, main {
 
     width:100%;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     /*************************************************************************/
     background-color: var(--frames-background-color);
     /*border-radius: 5px;*/
     border: 0px none;
+
+
+}
+
+.sectionColor1{
+    background-color: var(--color-section-1);
+}
+
+.sectionColor2{
+    background-color: var(--color-section-2);
 
 }
 

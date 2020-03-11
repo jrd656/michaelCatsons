@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
 
 :root{
-    --color-background: #F4F1F3;
+    --color-background: #233C68 ;
+    --color-element-background: #C9C8C9;
     --color-menu: #5A80A1;
     --color-sub1: rgb(55, 99, 180);
     --color-sub2: rgb(63, 181, 202);
@@ -13,5 +14,5 @@
     --font-text: 'Roboto', sans-serif;
 
 
-    --screen-width-phone-threshold:600px;
+
 }

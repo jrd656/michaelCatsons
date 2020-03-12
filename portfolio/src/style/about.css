@@ -21,8 +21,12 @@ h2{
     text-align: center;
     display:flex;
     flex-direction: column;
-    flex-wrap: nowrap;}
-  
+    flex-wrap: nowrap;
+
+    background-color: var(--color-element-background);
+
+}
+
   /* On mouse-over, add a deeper shadow */
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -34,6 +38,7 @@ h2{
       margin-top: 20px;
       display:flex;
       justify-content: center;
+
   }
 
   .qoo{
@@ -45,6 +50,9 @@ h2{
     text-align: center;
     flex-direction: column;
     flex-wrap: nowrap;
+
+     background-color: var(--color-element-background);
+
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -55,8 +63,13 @@ h2{
   }
 
   .img{
-    size: 100%;
     margin-top: 20px;
     display:flex;
     justify-content: center;
+
+  }
+
+  img{
+      object-fit: cover;
+
   }

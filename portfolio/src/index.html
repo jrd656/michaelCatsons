@@ -3,79 +3,86 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Welcome!!!</title>
     <link rel="stylesheet" type="text/css" href="style/index.css"/>
 
     <script>
 
-        function matchHeight(form){
-
-                form.style.height=  form.contentWindow.document.documentElement.offsetHeight  +'px';
+        window.addEventListener("resize",()=>{matchHeight(); setTimeout(matchHeight,300)});
+        window.addEventListener("load",()=>{matchHeight(); setTimeout(matchHeight,300)});
+        function matchHeight(){
+            let frames = document.querySelectorAll("iframe");
+            for (let i =0; i< frames.length; i++) {
+                if(frames[i].id !== "frameHeader")
+                    frames[i].style.height=  frames[i].contentWindow.document.body.offsetHeight  +'px';
+            }
 
         }
+
     </script>
 
 </head>
 <body>
 
-<div class="frameOuterContainer">
 
-        <div class="framesInnerContainer">
+    <div>
 
-            <div i>
+        <div class="framesHolder">
+
+            <div >
                 <a href="#frameAbout" id="downArrow">
-                    <img  src="../res/images/icons/img-icon-down.png" >
+                    <img class="buttonHoverEffect" src="../res/images/icons/img-icon-down.png" >
                 </a>
 
-                <iframe id="frameHeader" class="frame headerColor" src="html/header.html"  scrolling="no"  >
-
+                <iframe id="frameHeader" class="frame" src="html/header.html"  scrolling="no"  >
                 </iframe>
+
             </div>
-            <iframe id="frameAbout" class="frame sectionColor2" src="html/about.html"  scrolling="no"  onload="matchHeight(this)" >
+
+            <iframe id="frameAbout" class="frame" src="html/about.html"  scrolling="no" >
             </iframe>
 
-            <iframe id="frameTeam" class="frame sectionColor1" src="html/team.html"  scrolling="no"  onload="matchHeight(this)"   >
+            <iframe id="frameTeam" class="frame" src="html/team.html"  scrolling="no"  >
             </iframe>
 
-            <iframe id="frameContact" class="frame sectionColor2" src="html/contactForm.html"  scrolling="no"  onload="matchHeight(this)"  >
+            <iframe id="frameContact" class="frame" src="html/contactForm.html"  scrolling="no"  >
             </iframe>
 
-            
-
-        </div>
-</div>
-
-<div class="navMenuFixedContainer">
-
-    <div class="navMenuItemsContainer">
-
-        <div class="menuItem hoverButtonGrayScale">
-            <a href="#frameHeader">
-                    <img class="menuImg" src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
-            </a>
-        </div>
-
-        <div class="menuItem hoverButtonGrayScale">
-            <a href="#frameAbout">
-                <img class="menuImg" src="../res/images/icons/img-icon-about.svg" alt="About menu icon">
-            </a>
-        </div>
-
-        <div class="menuItem hoverButtonGrayScale">
-            <a href="#frameTeam">
-                <img class="menuImg" src="../res/images/icons/img-icon-members.svg" alt="Team menu icon">
-            </a>
-        </div>
-
-        <div class="menuItem hoverButtonGrayScale">
-            <a href="#frameContact">
-                <img class="menuImg" src="../res/images/icons/img-icon-Team.svg" alt="contact menu item">
-            </a>
         </div>
 
     </div>
 
-</div>
+    <div class="navMenuFixedContainer">
+
+        <div class="navMenuItemsHolder">
+
+            <div class="menuItem buttonHoverEffect">
+                <a href="#frameHeader">
+                        <img class="menuImg" src="../res/images/icons/img-icon-home.svg" alt="Home menu icon">
+                </a>
+            </div>
+
+            <div class="menuItem buttonHoverEffect">
+                <a href="#frameAbout">
+                    <img class="menuImg" src="../res/images/icons/img-icon-about.svg" alt="About menu icon">
+                </a>
+            </div>
+
+            <div class="menuItem buttonHoverEffect">
+                <a href="#frameTeam">
+                    <img class="menuImg" src="../res/images/icons/img-icon-members.svg" alt="Team menu icon">
+                </a>
+            </div>
+
+            <div class="menuItem buttonHoverEffect">
+                <a href="#frameContact">
+                    <img class="menuImg" src="../res/images/icons/img-icon-Team.svg" alt="contact menu item">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
 
 
 </body>

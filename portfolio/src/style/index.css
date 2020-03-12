@@ -1,67 +1,62 @@
 
 @import "global.css";
 
-/*main.html-----------------------------------------------------------*/
-
 
 :root{
     /*colors--------------------------------------------------------------*/
-    --page-backgrorund-color: var(--color-background-main);
-    --frames-background-color:var(--color-section-1);
-    --nav-menu-background-color: var(--color-menu);
+    --page-backgrorund-color: var(--color-page-background);
+    --frame-header-background-color:var(--color-page-background);
+    --frame-about-background-color:var(--color-section-1);
+    --frame-team-background-color:var(--color-section-2);
+    --frame-contact-background-color:var(--page-backgrorund-color);
+
+    --nav-menu-background-color: var(--color-menu-background);
 
     /*padding and margins---------------------------------------------------*/
-
-    --framesContainer-padding: 50px 50px;
-    --nav-menu-padding-bottom: 15px;
-    --nav-menu-padding-right: auto;
-    --nav-menu-padding-left: auto;
-    --nav-menu-padding-top: auto;
-
+    /*todo --framesContainer-padding: 50px 50px;*/
+    --nav-menu-bottom: 15px;
+    --nav-menu-right: auto;
+    --nav-menu-left: auto;
+    --nav-menu-top: auto;
 
     /*nav-------------------------------------------------------------------*/
     --nav-menu-icon-size: 5em  ;
     --nav-menu-flex-direction: row;
-    --menu-position-hotizontaly: flex-center;
-    --menu-position-vertically: center;
+    --menu-position-align-content: flex-center;
+    --menu-position-justify-content: center;
 
     --nav-menu-hover-scale-factor:1.05;
     --nav-menu-hover-opacity:0.8;
 
 }
-
-@media screen and (min-width:  600px ) {
+@media screen and (min-width:  800px ) {
  :root{
 
      --nav-menu-flex-direction: column;
-     --menu-position-hotizontaly: flex-end;
-     --menu-position-vertically: flex-end;
-     --nav-menu-padding-bottom: 15px;
-     --nav-menu-padding-right: 15px;
+     --menu-position-align-content: flex-end;
+     --menu-position-justify-content: flex-end;
+
+     --nav-menu-bottom: 15px;
+     --nav-menu-right: 15px;
  }
+
 
 }
 
+
 html{
     scroll-behavior: smooth;
-
 }
 body{
     background: var(--page-backgrorund-color);
     padding: 0px;
     margin: 0px;
-
-}
-html, body, main {
-    /*fixes the big that accrues when setting the .framesContainer height to 100%  */
-    height: 100%;
+    color:var(--color-text);
 }
 
-.frameOuterContainer{
-    padding: var(--framesContainer-padding);
 
-}
-.framesInnerContainer{
+
+.framesHolder{
     margin: 0;
     padding: 0;
     width: 100%;
@@ -80,103 +75,111 @@ html, body, main {
 }
 .frame {
 
+
     width:100%;
     margin: 0;
     padding: 10px;
-    /*************************************************************************/
-    background-color: var(--frames-background-color);
-    /*border-radius: 5px;*/
     border: 0px none;
 
 
 }
 
 
-.headerColor{
-    background-color:var(--page-backgrorund-color);
+
+#frameHeader{
+    background-color: var(--frame-header-background-color);
     height: 100vh;
+}
+#frameTeam{
+    background-color: var(--frame-team-background-color);
+}
+#frameAbout{
+    background-color: var(--frame-about-background-color);
 
 }
+#frameContact{
+    background-color: var(--frame-contact-background-color);
+}
 
+
+.menuItem{
+    width: var(--nav-menu-icon-size);
+    height:var(--nav-menu-icon-size);
+}
 #downArrow{
+
     width:  var(--nav-menu-icon-size);
     height: var(--nav-menu-icon-size);
     position: absolute;
     bottom: 20vh;
-    left:calc( 50vw - 25px);
+    left:calc( 50vw - var(--nav-menu-icon-size)/2);
 
 }
-#downArrow  img{
-    width: 100%;
+#downArrow  img , .menuItem img{
+    width: 100% ;
     height: 100%;
-
 }
 
-.sectionColor1{
-    background-color: var(--color-section-1);
-}
 
-.sectionColor2{
-    background-color: var(--color-section-2);
-
+.buttonHoverEffect{
+    filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    transition: all .1s ease-in-out;
 }
-
-.menuItem, .menuImg{
-    width: var(--nav-menu-icon-size);
-    height:var(--nav-menu-icon-size);
-}
-
-.hoverButtonGrayScale{
-/*filter: url(filters.svg#grayscale); !* Firefox 3.5+ *!*/
-filter: gray; /* IE5+ */
--webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
--webkit-transition: all .1s ease-in-out;
-}
-.hoverButtonGrayScale:hover {
-    filter: none;
-    -webkit-filter: grayscale(0);
-    -webkit-transform: scale(1.1);
+.buttonHoverEffect:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
 }
 
 
 .navMenuFixedContainer{
-    /*center the container*/
+    /*a container that occupies the lower section of the screen*/
+    /*it only holds a single item and allows to place it at different positions*/
     display:flex;
-    justify-content: var(--menu-position-vertically);
-    align-content: var(--menu-position-hotizontaly);
-
-
-    bottom: var(--nav-menu-padding-bottom);
-    right: var(--nav-menu-padding-right);
-    left: var(--nav-menu-padding-left);
-    top: var(--nav-menu-padding-top);
-
-    /*needed in order to place the nav menu over the content*/
-    position: fixed;
+    justify-content: var(--menu-position-justify-content);
+    align-content: var(--menu-position-align-content);
     width: 100%;
-    z-index: 1;
+
+
+    position: fixed;
+    bottom: var(--nav-menu-bottom);
+    right: var(--nav-menu-right);
+    left: var(--nav-menu-left);
+    top: var(--nav-menu-top);
+
+
     pointer-events: none;
 }
 
-.navMenuItemsContainer {
-
+.navMenuItemsHolder {
     /*elements positioning*/
     display:flex;
     flex-direction: var(--nav-menu-flex-direction);
 
     pointer-events: auto;
 
-
-    /*background color*/
     width:fit-content;
     background-color: var(--nav-menu-background-color);
     border-radius: 20px;
 
     opacity: var(--nav-menu-hover-opacity);
-    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
-.navMenuItemsContainer:hover{
-
-    -webkit-transform: scale(var(--nav-menu-hover-scale-factor));
+.navMenuItemsHolder:hover{
+    transform: scale(var(--nav-menu-hover-scale-factor));
     opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
